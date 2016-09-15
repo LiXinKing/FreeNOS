@@ -37,7 +37,7 @@ def iso_func(target, source, env):
     # Generate the ISO.
     if env.Detect('grub-mkrescue'):
         shutil.copy('config/intel/pc/grub.cfg', temp + '/boot/grub')
-        os.system('grub-mkrescue -d /usr/lib/grub/i386-pc -o ' + str(target[0]) +
+        os.system('grub-mkrescue -o ' + str(target[0]) +
                   ' --modules="multiboot iso9660 biosdisk gzio" ' + temp)
 
     # Fallback without grub2.
