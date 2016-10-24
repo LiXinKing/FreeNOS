@@ -17,6 +17,15 @@
 
 #include "LstFileCommand.h"
 #include <unistd.h>
+#include <stdlib.h>
+#include <dirent.h>
+#include <string.h>
+#include <errno.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <TerminalCodes.h>
+#include <Runtime.h>
+
 
 LstFileCommand::LstFileCommand()
     : ShellCommand("lst", 0)
