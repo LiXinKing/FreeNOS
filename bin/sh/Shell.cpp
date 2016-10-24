@@ -23,6 +23,7 @@
 #include "WriteCommand.h"
 #include "HelpCommand.h"
 #include "TimeCommand.h"
+#include "LstFileCommand.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,6 +42,8 @@ Shell::Shell()
     registerCommand(new WriteCommand());
     registerCommand(new HelpCommand(this));
     registerCommand(new TimeCommand());
+    registerCommand(new TimeCommand());
+    registerCommand(new LstFileCommand());
 }
 
 int Shell::run()

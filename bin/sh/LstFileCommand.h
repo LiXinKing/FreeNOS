@@ -33,6 +33,8 @@ class LstFileCommand : public ShellCommand
      */
     LstFileCommand();
 
+    int lstDir(Size nparams, char **params);   
+
     /**
      * Executes the command.
      * @param nparams Number of parameters given.
